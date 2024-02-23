@@ -7,4 +7,5 @@
 /dataSources/
 /dataSources.local.xml
 
-/data.txt
+data.txt
+data.json
