@@ -15,9 +15,11 @@ if today in birthdays_dict:
     birthday_person = birthdays_dict[today]
     file_path = f"Automated_wisher/letter_templates/letter_{
         random.randint(1, 3)}.txt"
+    
     with open(file_path) as letter_file:
         contents = letter_file.read()
         contents = contents.replace("[NAME]",birthday_person["name"])
+
     with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(MY_EMAIL,MY_PASSWORD)
