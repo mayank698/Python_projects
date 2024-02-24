@@ -3,16 +3,22 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
-
-data = pandas.read_csv("Flash_card/data/french_words.csv")
-to_dict = data.to_dict(orient="records")
 current_card = {}
+to_learn = {}
+
+try:
+    data = pandas.read_csv("Flash_card/data/words_to_learn.csv")
+except FileNotFoundError:
+    original_data = pandas.read_csv("Flash_card/data/french_words.csv")
+    to_learn = original_data.to_dict(orient="records")
+else:
+    to_learn = data.to_dict(orient="records")
 
 
 def next_card():
     global current_card, flip_timer
     window.after_cancel(flip_timer)
-    current_card = random.choice(to_dict)
+    current_card = random.choice(to_learn)
     canvas.itemconfig(card_title, text="French", fill="black")
     canvas.itemconfig(card_word, text=current_card["French"], fill="black")
     canvas.itemconfig(card_background, image=card_front_image)
@@ -25,9 +31,9 @@ def flip_card():
     canvas.itemconfig(card_background, image=card_back_image)
 
 def is_known():
-    to_dict.remove(current_card)
-    data = pandas.DataFrame(to_dict)
-    data.to_csv("Flash_card/data/words_to_learn.csv")
+    to_learn.remove(current_card)
+    data = pandas.DataFrame(to_learn)
+    data.to_csv("Flash_card/data/words_to_learn.csv",index=False)
     next_card()
 
 
