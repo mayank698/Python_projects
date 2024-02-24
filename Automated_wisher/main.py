@@ -7,7 +7,7 @@ MY_EMAIL = "YOUR EMAIL"
 MY_PASSWORD = "YOUR PASSWORD"
 
 today = (datetime.now().month, datetime.now().day)
-data = pandas.read_csv("Automated_wisher/birthday.csv")
+data = pandas.read_csv("Automated_wisher/birthdays.csv")
 
 birthdays_dict = {(data_row["month"], data_row["day"]): data_row for (index, data_row) in data.iterrows()}
 
