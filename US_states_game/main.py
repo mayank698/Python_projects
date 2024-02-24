@@ -3,17 +3,16 @@ import pandas
 
 screen = turtle.Screen()
 screen.title("US state game")
-image = "blank_states_img.gif"
+image = "US_states_game/blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-data = pandas.read_csv("50_states.csv")
+data = pandas.read_csv("US_states_game/50_states.csv")
 all_states = data.state.to_list()
 guessed_state = []
 
 while len(guessed_state) < 50:
-    answer_state = screen.textinput(title=f"{len(
-        guessed_state)}/50 States Correct", prompt="What's another state's name?").title()
+    answer_state = screen.textinput(title=f"{len(guessed_state)}/50 States Correct", prompt="What's another state's name?").title()
 
     if answer_state == "Exit":
         # Using list comprehension
