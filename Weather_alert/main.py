@@ -1,10 +1,14 @@
 import requests
 import smtplib
+from dotenv import load_dotenv
+import os
 
-URL = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = "fa45783ade4deea6aa1099efbc48bb39"
-MY_PASSWORD = "My password"
-MY_EMAIL = "My email"
+load_dotenv()
+
+api_key = os.getenv("API_KEY")
+URL = os.getenv("URL")
+MY_EMAIL = os.getenv("MY_EMAIL")
+MY_PASSWORD = os.getenv("MY_PASSWORD")
 
 parameters = {
     "lat": 26.846695,

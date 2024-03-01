@@ -1,9 +1,14 @@
 import requests
+from dotenv import load_dotenv
+import os
 
-STOCK_API_KEY = "Y3CDVZZIYKW1JLCA"
-NEWS_API_KEY = "00f93e3a78c145e9bfe7588ff65c83d5"
-STOCK_URL = "https://www.alphavantage.co/query"
-NEWS_URL = "https://newsapi.org/v2/everything"
+load_dotenv()
+
+
+STOCK_API_KEY=os.getenv("STOCK_API_KEY")
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+STOCK_URL = os.getenv("STOCK_URL")
+NEWS_URL = os.getenv("NEWS_URL")
 
 stock_params = {
     "function": "TIME_SERIES_DAILY",
