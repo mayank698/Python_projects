@@ -1,5 +1,9 @@
 import requests
 
+STOCK_API_KEY = "Y3CDVZZIYKW1JLCA"
+NEWS_API_KEY = "00f93e3a78c145e9bfe7588ff65c83d5"
+STOCK_URL = "https://www.alphavantage.co/query"
+NEWS_URL = "https://newsapi.org/v2/everything"
 
 stock_params = {
     "function": "TIME_SERIES_DAILY",
@@ -11,7 +15,7 @@ stock_params = {
 stock_response = requests.get(url=STOCK_URL, params=stock_params)
 stock_response.raise_for_status()
 stock_data = stock_response.json()["Time Series (Daily)"]
-stock_data_list = [value for (key, value) in stock_data.items()]
+stock_data_list = [value for (key, value) in stock_data.items()]    
 yesterday = stock_data_list[0]
 yesterday_closing_price = yesterday["4. close"]
 print(yesterday_closing_price)
@@ -42,5 +46,6 @@ if diff_percent > 5:
     news_data = news_response.json()["articles"]
     print(news_data)
     three_articles = news_data[:3]
-    formatted_article = [f"Headline:{article["title"]},\nBrief:{article["description"]}" for article in three_articles]
+    formatted_article = [f"Headline:{article["title"]},\nBrief:{
+        article["description"]}" for article in three_articles]
     print(formatted_article)
