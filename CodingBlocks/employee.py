@@ -423,7 +423,7 @@ class Employee:
 
     def updateData(self):
         conn = mysql.connector.connect(
-            host="localhost", user="root", password="root", database="MCA")
+            host="localhost", user="root", password="root", database="mayank")
         cursor = conn.cursor()
         try:
             cursor.execute("update MCA set Department=%s,Name=%s,Phone=%s,Email=%s,DOB=%s,DOJ=%s,Salary=%s,IdProof=%s,IdType=%s,Married=%s,Gender=%s,Address=%s,Country=%s ", (
