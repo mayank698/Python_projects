@@ -5,8 +5,7 @@
 - Python
 - MySQL
 
-## Features
-
+# How to run
 - Pull or download the zip file of the project.
 - Set image path according to your system.
 ## On command prompt or terminal run following commads:
