@@ -53,4 +53,6 @@ Want to contribute? Great!
 
 Make a change in your file and instantaneously see your updates!
 
+## Screenshot
+
 ![Screenshot](./images/screenshot.PNG)
