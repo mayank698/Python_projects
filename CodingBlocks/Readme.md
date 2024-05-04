@@ -16,11 +16,7 @@
 
 ## Tech
 
-<<<<<<< HEAD
 Employee management system uses a number of open source projects to work properly:
-=======
-Dillinger uses a number of open source projects to work properly:
->>>>>>> 61dc7d150431dca89dd87571fba3149680aaf35f
 
 - [Python] - For easy learning and fast running!
 - [Tkinter] - awesome GUI creator
