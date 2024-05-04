@@ -44,7 +44,7 @@ Instructions on how to use them in your own application are linked below.
 
 | Plugin | README |
 | ------ | ------ |
-| Tkinter | [ https://github.com/digitronik/tutorial-tkinter/blob/master/README.md ] |
+| Tkinter | https://github.com/digitronik/tutorial-tkinter/blob/master/README.md |
 | GitHub | [plugins/github/README.md][] |
 
 ## Development
