@@ -22,7 +22,7 @@ Employee management system uses a number of open source projects to work properl
 - [Tkinter] - awesome GUI creator
 - [MySQL] - For managing database
 
-And of course Employee management system itself is open source with a [public repository][dill]
+And of course Employee management system itself is open source with a public repository.
  on GitHub.
 
 ## Installation
