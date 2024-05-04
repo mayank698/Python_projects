@@ -56,7 +56,5 @@ Instructions on how to use them in your own application are linked below.
 Want to contribute? Great!
 
 Make a change in your file and instantaneously see your updates!
-<<<<<<< HEAD
+
 ![Screenshot](./images/Capture.PNG)
-=======
->>>>>>> 61dc7d150431dca89dd87571fba3149680aaf35f
