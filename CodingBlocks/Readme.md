@@ -8,6 +8,7 @@
 # How to run
 - Pull or download the zip file of the project.
 - Set image path according to your system.
+- Create mysql database with name "mayank" and table with name "MCA" with username and password as root.
 ## On command prompt or terminal run following commads:
 - pip install mysql-connector-python
 - pip install ttk
@@ -26,7 +27,7 @@ And of course Employee management system itself is open source with a public rep
 
 ## Installation
 
-Project requires [Python](https://www.python.org/downloads/) v3+ and [MySql](https://dev.mysql.com/downloads/installer/) database to run.
+Project requires [Python](https://www.python.org/downloads/) v3+ as programming language and [MySql](https://dev.mysql.com/downloads/installer/) as a database.
 
 Install the dependencies and start the server.
 
