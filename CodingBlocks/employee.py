@@ -7,8 +7,10 @@ import mysql.connector
 class Employee:
     def __init__(self, root):
         self.root = root
-        self.root.geometry("1530x790+0+0")
+        self.root.geometry("1920x1080+0+0")
         self.root.title("Employee management system")
+
+        # variable for Entries
 
         self.department = StringVar()
         self.name = StringVar()
@@ -28,7 +30,7 @@ class Employee:
 
         lbl_title = Label(self.root, text="EMPLOYEE MANAGEMENT SYSTEM",
                           font=('times new roman', 37, 'bold'), fg='darkblue', bg='white')
-        lbl_title.place(x=0, y=0, width=1330, height=50)
+        lbl_title.place(x=0, y=0, width=1550, height=50)
 
         # logo
         img_logo = Image.open('./CodingBlocks/images/icon.jpg')
@@ -36,45 +38,45 @@ class Employee:
         self.photo_logo = ImageTk.PhotoImage(img_logo)
 
         self.logo = Label(self.root, image=self.photo_logo)
-        self.logo.place(x=170, y=0, width=50, height=50)
+        self.logo.place(x=280, y=0, width=50, height=50)
 
         # image frame
         img_frame = Frame(self.root, bd=2, relief='ridge', bg='white')
-        img_frame.place(x=0, y=50, width=1530, height=160)
+        img_frame.place(x=0, y=50, width=1530, height=200)
 
         # 1st image
         img1 = Image.open('./CodingBlocks/images/img1.png')
-        img1 = img1.resize((440, 160))
+        img1 = img1.resize((430, 423))
         self.photo1 = ImageTk.PhotoImage(img1)
 
         self.img_1 = Label(img_frame, image=self.photo1)
-        self.img_1.place(x=0, y=0, width=440, height=160)
+        self.img_1.place(x=0, y=0, width=600, height=200)
 
         # 2nd image
         img2 = Image.open('./CodingBlocks/images/img3.png')
-        img2 = img2.resize((440, 160))
+        img2 = img2.resize((335, 215))
         self.photo2 = ImageTk.PhotoImage(img2)
 
         self.img_2 = Label(img_frame, image=self.photo2)
-        self.img_2.place(x=420, y=0, width=440, height=160)
+        self.img_2.place(x=500, y=0, width=550, height=200)
 
         # 3rd image
         img3 = Image.open('./CodingBlocks/images/img2.png')
-        img3 = img3.resize((440, 160))
+        img3 = img3.resize((373, 180))
         self.photo3 = ImageTk.PhotoImage(img3)
 
         self.img_3 = Label(img_frame, image=self.photo3)
-        self.img_3.place(x=850, y=0, width=440, height=160)
+        self.img_3.place(x=1000, y=0, width=600, height=230)
 
         # main frame
         Main_frame = Frame(self.root, bd=2, relief='ridge', bg='white')
-        Main_frame.place(x=0, y=200, width=1350, height=560)
+        Main_frame.place(x=0, y=230, width=1550, height=560)
 
         # upper frame
         upper_frame = LabelFrame(Main_frame, bd=2, relief="ridge", bg='white',
                                  text='Employee Management Information',
                                  font=('arial', 11, 'bold'), fg='red')
-        upper_frame.place(x=10, y=10, width=1240, height=220)
+        upper_frame.place(x=10, y=10, width=1500, height=240)
 
         # label for combo field for dep
         lbl_dep = Label(upper_frame, text="Department",
@@ -109,56 +111,56 @@ class Employee:
         # label for entry field for email
         lbl_email = Label(upper_frame, text="Email",
                           font=('arial', 11, 'bold'), bg='white')
-        lbl_email.grid(row=1, column=0, padx=2, pady=7, sticky=W)
+        lbl_email.grid(row=1, column=0, sticky=W)
 
         entry_email = Entry(upper_frame, textvariable=self.email,
                             font=('arial', 11, 'bold'), width=20)
-        entry_email.grid(row=1, column=1, padx=2, pady=7, sticky=W)
+        entry_email.grid(row=1, column=1, padx=2, sticky=W)
 
         # label for entry field for address
         lbl_address = Label(upper_frame, text="Address",
                             font=('arial', 11, 'bold'), bg='white')
-        lbl_address.grid(row=1, column=2, padx=2, pady=7, sticky=W)
+        lbl_address.grid(row=1, column=2, sticky=W)
 
         entry_address = Entry(upper_frame, textvariable=self.address, font=(
             'arial', 11, 'bold'), width=20)
-        entry_address.grid(row=1, column=3, padx=2, pady=7, sticky=W)
+        entry_address.grid(row=1, column=3, padx=2, sticky=W)
 
         # label for entry field for country
         lbl_country = Label(upper_frame, text="Country",
                             font=('arial', 11, 'bold'), bg='white')
-        lbl_country.grid(row=1, column=4, padx=2, pady=7, sticky=W)
+        lbl_country.grid(row=1, column=4, sticky=W)
 
         entry_country = Entry(upper_frame, textvariable=self.country, font=(
             'arial', 11, 'bold'), width=20)
-        entry_country.grid(row=1, column=5, padx=2, pady=7, sticky=W)
+        entry_country.grid(row=1, column=5, padx=2, sticky=W)
 
         # label for entry field for DOB
         lbl_DOB = Label(upper_frame, text="DOB", font=(
             'arial', 11, 'bold'), bg='white')
-        lbl_DOB.grid(row=2, column=0, padx=2, pady=7, sticky=W)
+        lbl_DOB.grid(row=2, column=0, sticky=W)
 
         entry_DOB = Entry(upper_frame, textvariable=self.dob,
                           font=('arial', 11, 'bold'), width=20)
-        entry_DOB.grid(row=2, column=1, padx=2, pady=7, sticky=W)
+        entry_DOB.grid(row=2, column=1, padx=2, sticky=W)
 
         # label for entry field for DOJ
         lbl_DOJ = Label(upper_frame, text="DOJ", font=(
             'arial', 11, 'bold'), bg='white')
-        lbl_DOJ.grid(row=2, column=2, padx=2, pady=7, sticky=W)
+        lbl_DOJ.grid(row=2, column=2, sticky=W)
 
         entry_DOJ = Entry(upper_frame, textvariable=self.doj,
                           font=('arial', 11, 'bold'), width=20)
-        entry_DOJ.grid(row=2, column=3, padx=2, pady=7, sticky=W)
+        entry_DOJ.grid(row=2, column=3, padx=2, sticky=W)
 
         # label for entry field for Salary (CTC)
         lbl_CTC = Label(upper_frame, text="CTC", font=(
             'arial', 11, 'bold'), bg='white')
-        lbl_CTC.grid(row=2, column=4, padx=2, pady=7, sticky=W)
+        lbl_CTC.grid(row=2, column=4, sticky=W)
 
         entry_CTC = Entry(upper_frame, textvariable=self.salary,
                           font=('arial', 11, 'bold'), width=20)
-        entry_CTC.grid(row=2, column=5, padx=2, pady=7, sticky=W)
+        entry_CTC.grid(row=2, column=5, padx=2, sticky=W)
 
         # label for combo field for Married Status
         lbl_Married_status = Label(
@@ -194,42 +196,42 @@ class Employee:
         entry_id_proof.grid(row=4, column=1, padx=2, pady=7, sticky=W)
 
         # Add Employee Image
-        employeeImg = Image.open(
-            './CodingBlocks/images/employeeImage.png')
-        employeeImg = employeeImg.resize((220, 190))
+        employeeImg = Image.open('./CodingBlocks/images/employeeImage.png')
+        employeeImg = employeeImg.resize((220, 220))
         self.employeePhoto = ImageTk.PhotoImage(employeeImg)
 
         self.imgEmp = Label(upper_frame, image=self.employeePhoto)
-        self.imgEmp.place(x=870, y=0, width=220, height=190)
+        self.imgEmp.place(x=1000, y=0, width=400, height=220)
 
         # Add four button Update, Save, Delete, Reset
 
-        button_frame = Frame(upper_frame, bd=2, relief='ridge', bg='white')
-        button_frame.place(x=1100, y=4, width=125, height=190)
+        button_frame = Frame(upper_frame, bd=2, relief='ridge')
+        button_frame.place(x=1370, y=4, width=125, height=220)
 
-        btn_save = Button(button_frame, text="Save", command=self.AddData, font=(
+        btn_save = Button(button_frame, command=self.AddData, text="Save", font=(
             'arial', 12, 'bold'), fg='white', bg='blue', width=12)
-        btn_save.grid(row=0, column=0, pady=7, sticky=W)
+        btn_save.grid(row=0, column=0, pady=10, sticky=W)
 
         btn_update = Button(button_frame, command=self.updateData, text="Update", font=(
             'arial', 12, 'bold'), fg='white', bg='blue', width=12)
-        btn_update.grid(row=1, column=0, pady=7, sticky=W)
+        btn_update.grid(row=1, column=0, pady=10, sticky=W)
 
-        btn_delete = Button(button_frame, text="Delete", command=self.deleteData, font=(
+        btn_delete = Button(button_frame, command=self.deleteData, text="Delete", font=(
             'arial', 12, 'bold'), fg='white', bg='blue', width=12)
-        btn_delete.grid(row=2, column=0, pady=7, sticky=W)
+        btn_delete.grid(row=2, column=0, pady=10, sticky=W)
 
-        btn_reset = Button(button_frame, text="Reset", command=self.resetEmployeeInfo, font=(
+        btn_reset = Button(button_frame, command=self.resetEmployeeInfo, text="Reset", font=(
             'arial', 12, 'bold'), fg='white', bg='blue', width=12)
-        btn_reset.grid(row=3, column=0, pady=7, sticky=W)
+        btn_reset.grid(row=3, column=0, pady=10, sticky=W)
 
         # down frame
         down_frame = LabelFrame(Main_frame, bd=2, relief="ridge", bg='white',
                                 text='Employee Management Information Table',
-                                font=('arial', 11, 'bold'), fg='violet')
-        down_frame.place(x=10, y=230, width=1240, height=240)
+                                font=('arial', 11, 'bold'), fg='red')
+        down_frame.place(x=10, y=250, width=1500, height=240)
 
         # searh Frame
+
         search_frame = LabelFrame(down_frame, text="Search Employee Information",
                                   relief='ridge', bd=2, font=('arial', 11, 'bold'), fg='violet', bg='white')
         search_frame.place(x=0, y=0, width=1220, height=55)
@@ -257,14 +259,15 @@ class Employee:
         btn_showAll.grid(row=0, column=4, padx=4, pady=2, sticky=W)
 
         # searh Frame
+
         table_frame = Frame(down_frame, relief='ridge', bd=2, bg='white')
         table_frame.place(x=0, y=55, width=1220, height=180)
 
         scroll_x = ttk.Scrollbar(table_frame, orient=HORIZONTAL)
         scroll_y = ttk.Scrollbar(table_frame, orient=VERTICAL)
 
-        self.employee_table = ttk.Treeview(table_frame, column=("dep", "name", "phone", 'email', "dob", 'doj', 'salary', 'idProof',
-                                           'idType', 'married', 'gender', 'address', 'country',), xscrollcommand=scroll_x.set, yscrollcommand=scroll_y.set)
+        self.employee_table = ttk.Treeview(table_frame, column=("dep", "name", "phone", 'email', "dob", "doj", "salary", "idProof",
+                                           "idType", "married", "gender", "address", "country",), xscrollcommand=scroll_x.set, yscrollcommand=scroll_y.set)
         scroll_x.pack(side=BOTTOM, fill=X)
         scroll_y.pack(side=RIGHT, fill=Y)
 
@@ -294,10 +297,9 @@ class Employee:
         self.employee_table.column('email', width=100)
         self.employee_table.column('gender', width=100)
         self.employee_table.column('address', width=100)
-
         self.employee_table.column('married', width=100)
-        self.employee_table.column('dob', width=100)
-        self.employee_table.column('doj', width=100)
+        self.employee_table.column('dob', width=50)
+        self.employee_table.column('doj', width=50)
         self.employee_table.column('idType', width=100)
         self.employee_table.column('idProof', width=100)
         self.employee_table.column('salary', width=100)
@@ -389,7 +391,7 @@ class Employee:
 
     def deleteData(self):
         conn = mysql.connector.connect(
-            host="localhost", user="root", password="root", database="mayank")
+            host="localhost", username="root", password="root", database="mayank")
         cursor = conn.cursor()
 
         try:
@@ -404,7 +406,7 @@ class Employee:
 
     def searchEmployeeInfo(self):
         conn = mysql.connector.connect(
-            host="localhost", user="root", password="root", database="mayank")
+            host="localhost", username="root", password="root", database="mayank")
         cursor = conn.cursor()
         try:
             cursor.execute("select * from MCA where " +
@@ -423,10 +425,10 @@ class Employee:
 
     def updateData(self):
         conn = mysql.connector.connect(
-            host="localhost", user="root", password="root", database="mayank")
+            host="localhost", username="root", password="root", database="mayank")
         cursor = conn.cursor()
         try:
-            cursor.execute("update MCA set Department=%s,Name=%s,Phone=%s,Email=%s,DOB=%s,DOJ=%s,Salary=%s,IdProof=%s,IdType=%s,Married=%s,Gender=%s,Address=%s,Country=%s ", (
+            cursor.execute("update employee set Department=%s,Name=%s,Phone=%s,Email=%s,DOB=%s,DOJ=%s,Salary=%s,IdType=%s,Married=%s,Gender=%s,Address=%s,Country=%s where IdProof=%s", (
                 self.department.get(),
                 self.name.get(),
                 self.phone.get(),
@@ -434,12 +436,12 @@ class Employee:
                 self.dob.get(),
                 self.doj.get(),
                 self.salary.get(),
-                self.idProof.get(),
                 self.idType.get(),
                 self.married.get(),
                 self.gender.get(),
                 self.address.get(),
                 self.country.get(),
+                self.idProof.get(),
             ))
             conn.commit()
             self.resetEmployeeInfo()
