@@ -28,8 +28,3 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a Pull Request.
-
-## Contact
-Mayank Pandey - [mpandeymp0@gmail.com](mailto:mpandeymp0@gmail.com)
-
-Project Link: [https://github.com/mayank698/Python_projects/tree/main/Flight_Deal](https://github.com/mayank698/Python_projects/tree/main/Flight_Deal)
