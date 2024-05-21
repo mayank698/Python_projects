@@ -11,7 +11,7 @@ Before launching the project I hope you have knowledge of some technologies that
 - [APIs](https://www.ibm.com/topics/api)
 - [OOPs](https://docs.python.org/3/tutorial/classes.html)
 
-## Create files and folders
+## Create files
 
 After cloning or downloading the project make sure to create some of the **Env** variables and also create your account on the respected sites to get your **APIs**:
 
@@ -19,7 +19,7 @@ After cloning or downloading the project make sure to create some of the **Env**
 - USERNAME_SHEETY
 - SHEETY_BEARER
 - [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/login)
-- 
+  
 ## Contributing
 Contributions are welcome! Please follow these steps:
 
