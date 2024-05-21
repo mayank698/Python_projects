@@ -16,6 +16,6 @@ Before launching the project I hope you have knowledge of some technologies that
 After cloning or downloading the project make sure to create some of the **Env** variables and also create your account on the respected sites to get your **APIs**:
 
 - [SHEETY](https://sheety.co/)
-- USERNAME_SHEETY: sheety.co
-- SHEETY_BEARER: sheety.co
+- USERNAME_SHEETY
+- SHEETY_BEARER
 - [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/login)
