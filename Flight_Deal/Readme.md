@@ -18,4 +18,4 @@ After cloning or downloading the project make sure to create some of the **Env**
 - [SHEETY](sheety.co)
 - USERNAME_SHEETY: sheety.co
 - SHEETY_BEARER: sheety.co
-- TEQUILA_API_KEY : tequila.kiwi.com
+- [TEQUILA_API_KEY](tequila.kiwi.com)
