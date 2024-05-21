@@ -1,7 +1,7 @@
 # Welcome to FlightDeals!
 
 Hi! I'm **Mayank Pandey**. This is my mini project in the journey of learning python. In this project I have used the power of **Python** and some **APIs**.
-With the help of this project you can search for cheapest flights at the moment and can plan your journey accordingly. Hope you will like the project. If you have any suggestions kindly give a request I will appreciate it and if found good enough I will add it to my project and will give credit to the contributor.
+With the help of this project you can search for cheapest flights at the moment and can plan your journey accordingly. Hope you will like the project.
 
 ## Prerequisites
 
@@ -19,3 +19,12 @@ After cloning or downloading the project make sure to create some of the **Env**
 - USERNAME_SHEETY
 - SHEETY_BEARER
 - [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/login)
+- 
+## Contributing
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
