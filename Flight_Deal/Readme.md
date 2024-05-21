@@ -7,9 +7,9 @@ With the help of this project you can search for cheapest flights at the moment 
 
 Before launching the project I hope you have knowledge of some technologies that are required and has been used in this project:
 
-- Python
-- APIs
-- OOPs
+- [Python](https://www.python.org/doc/)
+- [APIs](https://www.ibm.com/topics/api)
+- [OOPs](https://docs.python.org/3/tutorial/classes.html)
 
 ## Create files and folders
 
