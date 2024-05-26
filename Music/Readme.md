@@ -1,4 +1,4 @@
-# Welcome to FlightDeals!
+# Welcome !
 
 Hi! I'm **Mayank Pandey**. This is my mini project in the journey of learning python. In this project I have used the power of **Python** and **BeautifulSoup**.
 With this project you can create a playlist of 100 songs on spotify by using Billboard top 100 songs. Just input date of which you want the playlist and enjoy the songs.
