@@ -14,7 +14,7 @@ Before launching the project I hope you have knowledge of some technologies that
 
 ## Create files
 
-After cloning or downloading the project make sure to create some of the **Env** variables and also create your account on spotify and access it's [developer](https://developer.spotify.com/dashboard) mode to get these values:
+After cloning or downloading the project make sure to create some of the **Env** variables and also create your account on spotify and access it's [developer mode](https://developer.spotify.com/dashboard) to get these values:
 
 - CLIENT_ID
 - CLIENT_SECRET
