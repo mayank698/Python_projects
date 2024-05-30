@@ -578,7 +578,7 @@ class Employee:
         cursor = conn.cursor()
         try:
             cursor.execute(
-                "update employee set Department=%s,Name=%s,Phone=%s,Email=%s,DOB=%s,DOJ=%s,Salary=%s,IdType=%s,Married=%s,Gender=%s,Address=%s,Country=%s where IdProof=%s",
+                "update mayank set Department=%s,Name=%s,Phone=%s,Email=%s,DOB=%s,DOJ=%s,Salary=%s,IdType=%s,Married=%s,Gender=%s,Address=%s,Country=%s where IdProof=%s",
                 (
                     self.department.get(),
                     self.name.get(),
