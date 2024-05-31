@@ -539,7 +539,7 @@ class Employee:
 
         try:
             cursor.execute(
-                "delete from mayank where IdProof= %s", (self.idProof.get(),)
+                "delete from mayank where IdProof= (%s)", (self.idProof.get(),)
             )
             conn.commit()
             messagebox.showinfo(
