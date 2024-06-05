@@ -23,9 +23,9 @@
 
 Employee management system uses a number of open source projects to work properly:
 
-- [Python] - For easy learning and fast running!
-- [Tkinter] - awesome GUI creator
-- [MySQL] - For managing database
+- Python - For easy learning and fast running!
+- Tkinter - awesome GUI creator
+- MySQL - For managing database
 
 And of course Employee management system itself is open source with a public repository on GitHub.
 
