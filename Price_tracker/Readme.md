@@ -1,6 +1,7 @@
 # Welcome to Price_tracker!
 
 Hi! I'm **Mayank Pandey**. This is my mini project in the journey of learning python. In this project I have used the power of **Python** and **BeautifulSoup**.
+
 This project is used to track the price of products on amazon which you would be planning to buy, as we see the prices of items fluctuate every time. This program will help you get the lowest price of the item and will notify you when price drops below your desired amount.
 
 ## Prerequisites
@@ -14,10 +15,10 @@ Before launching the project I hope you have knowledge of some technologies that
 
 After cloning or downloading the project make sure to create some of the **env** variables:
 
-- [EMAIL] - Your gmail on which you want to recieve the price update.
-- [PASSWORD] - Your gmail app password.
-- [URL] - URL of your product from amazon.
-- [BUY_PRICE] - Your targeted price at which you want to buy the product.
+- EMAIL - Your gmail on which you want to recieve the price update.
+- PASSWORD - Your gmail app password.
+- URL - URL of your product from amazon.
+- BUY_PRICE - Your targeted price at which you want to buy the product.
 
 ## Installation
 
