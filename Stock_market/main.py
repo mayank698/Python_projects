@@ -51,6 +51,6 @@ if diff_percent > 5:
     news_data = news_response.json()["articles"]
     print(news_data)
     three_articles = news_data[:3]
-    formatted_article = [f"Headline:{article["title"]},\nBrief:{
-        article["description"]}" for article in three_articles]
+    formatted_article = [f"Headline:{article['title']},\nBrief:{
+        article['description']}" for article in three_articles]
     print(formatted_article)
