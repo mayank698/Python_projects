@@ -12,7 +12,7 @@ Before launching the project I hope you have knowledge of some technologies that
 - [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
 - [Selenium](https://www.selenium.dev/documentation/webdriver/)
 
-Also create a google form and store the link in an **_.env_** file with name **GOOGLE_FORM**.
+Also create a google form and store the link in an **_.env_** which should have the constant variable of **GOOGLE_FORM** and value should be your google form link.
 
 ## Installation
 
