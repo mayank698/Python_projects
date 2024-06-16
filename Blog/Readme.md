@@ -18,6 +18,15 @@ After cloning or downloading the project make sure to create some of the **Env**
 - EMAIL - Your Gmail id where you want to see the notifications.
 - PASSWORD - Your app password.
 
+## Installation
+
+Install Flask and Jinja by running following commands on any CLI:
+
+```sh
+pip install Flask
+pip install Jinja2
+```
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
