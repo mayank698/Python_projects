@@ -1,0 +1,34 @@
+# Welcome !
+
+Hi! I'm **Mayank Pandey**. This is my mini project in the journey of learning python. In this project I have used the power of **Python**, **Flask** and **sqlite**.
+This is a simple website made in python with flask which is used as a library where you can keep your favourite books and give them ratings. The books are stored in sql database.
+
+## Prerequisites
+
+Before launching the project I hope you have knowledge of some technologies that are required and has been used in this project:
+
+- [Python](https://www.python.org/doc/)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [sqlite](https://sqlitebrowser.org/dl/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+
+## Installation
+
+Install Flask and Jinja by running following commands on any CLI:
+
+```sh
+pip install Flask
+pip install sqlalchemy
+pip install flask_sqlalchemy
+pip install jinja
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
