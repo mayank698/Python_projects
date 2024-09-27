@@ -23,21 +23,21 @@ stock_data = stock_response.json()["Time Series (Daily)"]
 stock_data_list = [value for (key, value) in stock_data.items()]    
 yesterday = stock_data_list[0]
 yesterday_closing_price = yesterday["4. close"]
-print(yesterday_closing_price)
+print(f"Yesterday closing price: {yesterday_closing_price}")
 
 # Closing price
 day_before_yesterday_data = stock_data_list[1]
 day_before_yesterday_closing_price = day_before_yesterday_data["4. close"]
-print(day_before_yesterday_closing_price)
+print(f"Day before yesterday closing price: {day_before_yesterday_closing_price}")
 
 # Difference between yesterday and day_before yesterday closing price
 difference = abs(float(yesterday_closing_price) -
                  float(day_before_yesterday_closing_price))
-print(difference)
+print(f"Difference between yesterday_closing_price and day_before_yesterday_closing_price: {difference}")
 
 # Percentage difference
 diff_percent = (difference/float(yesterday_closing_price))*100
-print(diff_percent)
+print(f"Difference in percentage: {diff_percent}")
 
 # Getting news if stock price change is more than 5 percent
 if diff_percent > 5:
@@ -49,7 +49,7 @@ if diff_percent > 5:
     news_response = requests.get(url=NEWS_URL, params=news_params)
     news_response.raise_for_status()
     news_data = news_response.json()["articles"]
-    print(news_data)
+    # print(news_data)
     three_articles = news_data[:3]
     formatted_article = [f"Headline:{article['title']},\nBrief:{
         article['description']}" for article in three_articles]
