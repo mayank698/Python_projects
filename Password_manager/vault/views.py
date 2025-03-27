@@ -117,16 +117,18 @@ def search_passwords(request):
 
 # Admin functionality
 def is_admin(user):
-    return user.is_authenticated and user.is_staff
+    return user.is_authenticated and user.is_superuser
 
 @user_passes_test(is_admin)
 def admin_user_list(request):
-    users = User.objects.all().order_by('-date_joined')
+    # Only show non-superuser accounts
+    users = User.objects.filter(is_superuser=False).order_by('-date_joined')
     return render(request, 'vault/admin_user_list.html', {'users': users})
 
 @user_passes_test(is_admin)
 def admin_delete_user(request, user_id):
-    user_to_delete = get_object_or_404(User, id=user_id)
+    # Prevent access to superuser accounts
+    user_to_delete = get_object_or_404(User, id=user_id, is_superuser=False)
     
     # Prevent admins from deleting themselves
     if user_to_delete == request.user:
@@ -142,3 +144,18 @@ def admin_delete_user(request, user_id):
         return redirect('admin_user_list')
     
     return render(request, 'vault/admin_delete_user_confirm.html', {'user_to_delete': user_to_delete})
+
+@login_required
+def delete_account(request):
+    if request.method == 'POST':
+        # Delete all passwords associated with the user
+        Password.objects.filter(user=request.user).delete()
+        
+        # Delete the user account
+        username = request.user.username
+        request.user.delete()
+        
+        messages.success(request, f'Your account "{username}" has been deleted successfully.')
+        return redirect('login')
+    
+    return render(request, 'vault/delete_account_confirm.html')
