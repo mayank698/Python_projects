@@ -10,4 +10,8 @@ urlpatterns = [
     path('password/<uuid:pk>/edit/', views.password_edit, name='password_edit'),
     path('password/<uuid:pk>/delete/', views.password_delete, name='password_delete'),
     path('search/', views.search_passwords, name='search_passwords'),
+    
+    # Admin URLs
+    path('admin-users/', views.admin_user_list, name='admin_user_list'),
+    path('admin-users/<int:user_id>/delete/', views.admin_delete_user, name='admin_delete_user'),
 ] 

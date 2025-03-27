@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
+from django.contrib.auth.models import User
 from .forms import PasswordForm, SignUpForm, CustomAuthenticationForm
 from .models import Password
 from django.urls import reverse_lazy
@@ -113,3 +114,31 @@ def search_passwords(request):
     
     # Regular HTML response
     return render(request, 'vault/dashboard.html', {'passwords': passwords, 'query': query})
+
+# Admin functionality
+def is_admin(user):
+    return user.is_authenticated and user.is_staff
+
+@user_passes_test(is_admin)
+def admin_user_list(request):
+    users = User.objects.all().order_by('-date_joined')
+    return render(request, 'vault/admin_user_list.html', {'users': users})
+
+@user_passes_test(is_admin)
+def admin_delete_user(request, user_id):
+    user_to_delete = get_object_or_404(User, id=user_id)
+    
+    # Prevent admins from deleting themselves
+    if user_to_delete == request.user:
+        messages.error(request, "You cannot delete your own admin account.")
+        return redirect('admin_user_list')
+    
+    username = user_to_delete.username
+    
+    if request.method == 'POST':
+        # Delete the user
+        user_to_delete.delete()
+        messages.success(request, f"User '{username}' has been deleted successfully.")
+        return redirect('admin_user_list')
+    
+    return render(request, 'vault/admin_delete_user_confirm.html', {'user_to_delete': user_to_delete})
