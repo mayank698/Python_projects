@@ -117,30 +117,18 @@ def search_passwords(request):
 
 # Admin functionality
 def is_admin(user):
-<<<<<<< HEAD
     return user.is_authenticated and user.is_superuser
 
 @user_passes_test(is_admin)
 def admin_user_list(request):
     # Only show non-superuser accounts
     users = User.objects.filter(is_superuser=False).order_by('-date_joined')
-=======
-    return user.is_authenticated and user.is_staff
-
-@user_passes_test(is_admin)
-def admin_user_list(request):
-    users = User.objects.all().order_by('-date_joined')
->>>>>>> cf31e8020411188b3b14db541db4ddbbff6abf88
     return render(request, 'vault/admin_user_list.html', {'users': users})
 
 @user_passes_test(is_admin)
 def admin_delete_user(request, user_id):
-<<<<<<< HEAD
     # Prevent access to superuser accounts
     user_to_delete = get_object_or_404(User, id=user_id, is_superuser=False)
-=======
-    user_to_delete = get_object_or_404(User, id=user_id)
->>>>>>> cf31e8020411188b3b14db541db4ddbbff6abf88
     
     # Prevent admins from deleting themselves
     if user_to_delete == request.user:
@@ -156,7 +144,6 @@ def admin_delete_user(request, user_id):
         return redirect('admin_user_list')
     
     return render(request, 'vault/admin_delete_user_confirm.html', {'user_to_delete': user_to_delete})
-<<<<<<< HEAD
 
 @login_required
 def delete_account(request):
@@ -172,5 +159,3 @@ def delete_account(request):
         return redirect('login')
     
     return render(request, 'vault/delete_account_confirm.html')
-=======
->>>>>>> cf31e8020411188b3b14db541db4ddbbff6abf88
